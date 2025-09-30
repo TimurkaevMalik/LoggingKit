@@ -7,7 +7,6 @@
 
 import Foundation
 
-///TODO: move to a separate module
 public protocol LoggerProtocol {
     typealias LogMessage = () -> String
     
