@@ -7,7 +7,11 @@ let package = Package(
     name: "LoggingKit",
     platforms: [.iOS(.v14)],
     products: [
-        .library(name: "LoggingKit", targets: ["LoggingKit"]),
+        .library(
+            name: "LoggingKit",
+            type: .dynamic,
+            targets: ["LoggingKit"]
+        ),
     ],
     targets: [
         .target(name: "LoggingKit")
