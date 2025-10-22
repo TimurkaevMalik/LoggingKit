@@ -7,7 +7,6 @@ let package = Package(
     name: "LoggingKit",
     platforms: [.iOS(.v14)],
     products: [
-        
         .library(
             name: "LoggingKit",
             type: .dynamic,
