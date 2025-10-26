@@ -3,17 +3,17 @@
 
 import PackageDescription
 
+let kitName = "LoggingKit"
+let kitNameDynamic = "LoggingKit"
+
 let package = Package(
-    name: "LoggingKit",
+    name: kitName,
     platforms: [.iOS(.v14)],
     products: [
-        .library(
-            name: "LoggingKit",
-            type: .dynamic,
-            targets: ["LoggingKit"]
-        ),
+        .library(name: kitName, targets: [kitName]),
+        .library(name: kitNameDynamic, type: .dynamic, targets: [kitName])
     ],
     targets: [
-        .target(name: "LoggingKit")
+        .target(name: kitName)
     ]
 )
