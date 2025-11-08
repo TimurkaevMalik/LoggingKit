@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol LoggerProtocol {
+public protocol LoggerProtocol: Sendable {
     typealias LogMessage = () -> String
     
     func log( _ message: @autoclosure @escaping LogMessage, level: LogLevel)
@@ -18,6 +18,6 @@ public protocol LoggerProtocol {
     func fault(_ message: @autoclosure @escaping LogMessage)
 }
 
-public protocol LoggerSink {
+public protocol LoggerSink: Sendable {
     func record(_ message: @autoclosure @escaping () -> String, level: LogLevel)
 }

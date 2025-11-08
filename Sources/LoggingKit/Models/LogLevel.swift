@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum LogLevel: Int {
+public enum LogLevel: Int, Sendable {
     case debug, info, notice, error, fault
 }
 
