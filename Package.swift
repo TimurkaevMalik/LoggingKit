@@ -11,7 +11,6 @@ let package = Package(
     platforms: [.iOS(.v14)],
     products: [
         .library(name: kitName, targets: [kitName]),
-        .library(name: kitNameDynamic, type: .dynamic, targets: [kitName])
     ],
     targets: [
         .target(name: kitName)
